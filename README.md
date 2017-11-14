@@ -16,7 +16,7 @@ Once music21 is installed, simply clone this repo and run attempt4.py. A ~1 min 
 
 ## Technical Details
 
-The project uses a custom Markov-chain implementation (see markov.py). The Markov matrix records transition probilities from the current state to the next item in the sequence. My implementation allows us to define the current state as any number of the previous items in the sequence -- this is referred to as the order of the Markov-chain.
+The project uses a custom Markov-chain implementation (see markov.py). The Markov matrix records transition probabilities from the current state to the next item in the sequence. My implementation allows us to define the current state as any number of the previous items in the sequence -- this is referred to as the order of the Markov-chain.
 
 In order to generate the music itself, both the notes and rhythm are first encoded as sequences and "learned" by a Markov matrix. Then the matrix is used to generate music by sampling random numbers to determine which transition to take from the current state, i.e. which note or rhythm sequence to append.
 
